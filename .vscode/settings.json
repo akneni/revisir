@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "sha.h": "c",
+        "stdio.h": "c",
+        "stdint.h": "c",
+        "memory.h": "c",
+        "stdlib.h": "c"
+    },
+    "cSpell.words": [
+        "verdb"
+    ]
+}

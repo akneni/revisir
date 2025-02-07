@@ -1,0 +1,9 @@
+[project]
+name = "revisir"
+version = "0.0.1"
+language = "c"
+
+[build_options]
+compiler_path = "gcc"
+debug_flags = ["-g", "-O0", "-Wall", "-fsanitize=undefined", "-lssl", "-lcrypto"]
+release_flags = ["-Wall", "-O3", "-lssl", "-lcrypto"]
