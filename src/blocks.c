@@ -1,15 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <stdint.h>
-#include <stdbool.h>
-#include <memory.h>
 #include <openssl/sha.h>
+
 #include "utils.c"
-#include "blocks.c"
+
 
 #define BLOCK_SIZE 8100
-
-#define FOO
 
 typedef enum BlockType {
 	BlockTypeCreate,
@@ -41,18 +36,4 @@ __always_inline void Block_hash(const Block* b, uint8_t* out_buffer) {
 /// @return  
 __always_inline bool Block_equals(const Block* b1, const Block* b2) {
 	return Sha256Checksum_equals(&b1->checksum, &b2->checksum);
-}
-
-int main() {
-	Block b = {
-		.length = 121,
-	};
-
-	printf("%lu\n", sizeof(Block));
-
-	// uint8_t h[SHA256_DIGEST_LENGTH];
-
-	// SHA256((const unsigned char*) &b, sizeof(b), (unsigned char*) h);
-
-	return 0;
 }
