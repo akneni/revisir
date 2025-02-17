@@ -6,6 +6,9 @@
 #include <openssl/sha.h>
 #include "../include/utils.h"
 #include "../include/blocks.h"
+#include "../include/metadata.h"
+
+
 
 int main() {
 	Block b = {
@@ -13,10 +16,6 @@ int main() {
 	};
 
 	printf("%lu\n", sizeof(Block));
-
-	// uint8_t h[SHA256_DIGEST_LENGTH];
-
-	// SHA256((const unsigned char*) &b, sizeof(b), (unsigned char*) h);
 
 	return 0;
 }

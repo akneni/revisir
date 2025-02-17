@@ -7,6 +7,7 @@
 #include <stdbool.h>
 #include <memory.h>
 #include <openssl/sha.h>
+#include "../include/utils.h"
 
 #define UNIX_TIMESTAMP uint64_t
 

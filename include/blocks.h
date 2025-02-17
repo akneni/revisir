@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include <openssl/sha.h>
 #include "../include/utils.h"
+#include "../include/blocks.h"
 
 #define BLOCK_SIZE 8100
 
@@ -13,7 +14,6 @@ typedef enum BlockType {
     BlockTypeDelete,
 } BlockType;
 
-// Exactly (2^13) bytes: fits cleanly into 2 pages
 typedef struct Block {
     Sha256Checksum id;
     Sha256Checksum checksum;

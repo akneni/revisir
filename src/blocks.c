@@ -5,8 +5,6 @@
 
 
 
-
-
 /// @brief 
 /// @param b 
 /// @param out_buffer Must be least SHA256_DIGEST_LENGTH bytes (32 bytes)
